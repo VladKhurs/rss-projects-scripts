@@ -1,0 +1,61 @@
+@import '@scss/variables';
+
+.rc-menu {
+  font-size: 14px;
+  line-height: 100%;
+  color: #181818;
+  line-height: 10px;
+  margin-top: 0;
+  border-bottom-color: transparent;
+  min-height: 70px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.rc-menu-item {
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+
+.rc-menu-submenu {
+  cursor: pointer;
+}
+
+.rc-menu-horizontal > .rc-menu-submenu > .rc-menu-submenu-title {
+  padding: 25px 8px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.rc-menu-horizontal > .rc-menu-submenu-active {
+  color: #181818;
+  background-color: white;
+  border-bottom-color: #181818;
+}
+
+.rc-menu-submenu-active > .rc-menu-submenu-title {
+  background-color: white;
+}
+
+.custom-button {
+  padding: 4px;
+  // margin-left: 10px;
+
+  @media (min-width: $mobile-width) {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: transparent !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+.rc-menu.rc-menu-sub {
+  border: none;
+  box-shadow: 0 4px 4px #d9d9d9;
+}

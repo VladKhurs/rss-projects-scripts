@@ -1,0 +1,237 @@
+@import '@scss/variables.scss';
+
+.contentNew {
+  background-color: rgb(43, 48, 65);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-color: white;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  gap: 25px;
+  cursor: auto;
+}
+
+:global(.mobile) .content {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px 25px;
+}
+
+.cardLink {
+  width: 19%;
+}
+
+:global(.mobile) .cardLink {
+  width: 48%;
+  margin-bottom: 10px;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+}
+
+:global(.mobile) .card {
+  text-transform: uppercase;
+}
+
+.card {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  border: none;
+  text-transform: none;
+  text-align: center;
+
+  :global(.ant-card-body) {
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    padding-top: 10px;
+  }
+}
+
+.expendIcon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: #333;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+  }
+
+  &::before {
+    content: '';
+    transition: transform 0.1s;
+    top: 50%;
+    background-color: #333;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+}
+
+:global(.ant-collapse-item-active) .expendIcon {
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  max-width: 1200px;
+  gap: 25px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 17px;
+      color: rgb(51, 51, 51);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+:global(.mobile) .menuContainer {
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+:global(.mobile) :global(.submenu-2) {
+  li a:not(.submenuTitle) {
+    margin-left: 20px;
+  }
+}
+
+.menuContainer .submenuTitle {
+  font-size: 17px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 17px;
+  padding-bottom: 10px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.imgCard {
+  text-decoration: none;
+
+  img {
+    // max-width: 100%;
+    width: 100%;
+  }
+
+  p {
+    color: #333;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.imgCardSmall {
+  width: 17%;
+}
+
+.imgCardBig {
+  width: 27%;
+}
+
+:global(.mobile) .imgCardSmall {
+  width: 100%;
+}
+
+:global(.mobile) .imgCardBig {
+  width: 100%;
+}
+
+:global(.mobile) :global(.ant-collapse-item) {
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+:global(.mobile) :global(.ant-collapse-item:last-child) {
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+:global(.mobile) :global(.ant-collapse-header-text) {
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.toolbar.mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $mobile-toolbox-height;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.mobileMenu {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  header {
+    padding: 12px 9px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  :global(.content) {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+}

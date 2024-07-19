@@ -1,0 +1,24 @@
+{
+  "react FC": {
+    "scope": "typescriptreact",
+    "prefix": "reactfc",
+    "body": [
+      "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
+      "  title?: string; // вставить свои пропсы",
+      "}",
+      "",
+      "export default function ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({ title }: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props): JSX.Element {",
+      "  return (",
+      "    <div>",
+      "      $2{title}",
+      "    </div>",
+      "  );",
+      "}",
+      "",
+      "// удалить заглушку при необходимости",
+      "${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.defaultProps = {",
+      "  title: '${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}',",
+      "};"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-column-gap: 30px;
+  column-gap: 30px;
+  grid-row-gap: 32px;
+  row-gap: 32px;
+}

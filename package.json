@@ -1,0 +1,63 @@
+{
+  "name": "e-commerce-application",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host --open",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "test": "jest",
+    "coverage": "jest --coverage --collectCoverageFrom='src/**/*.{jsx}'",
+    "watch": "jest --watch"
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.3.7",
+    "@commercetools/platform-sdk": "7.8.0",
+    "@commercetools/sdk-client-v2": "2.5.0",
+    "antd": "5.17.0",
+    "classnames": "2.5.1",
+    "dayjs": "1.11.11",
+    "postcode-validator": "3.8.21",
+    "rc-menu": "9.14.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.38.0",
+    "react-responsive-carousel": "3.2.23",
+    "react-router-dom": "6.23.0",
+    "vite-plugin-node-polyfills": "0.11.2",
+    "zustand": "4.5.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "15.0.6",
+    "@types/jest": "29.5.12",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@vitejs/plugin-react": "2.2.0",
+    "dotenv": "16.4.5",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-prettier": "8.10.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "husky": "8.0.3",
+    "jest": "29.7.0",
+    "prettier": "2.8.8",
+    "sass": "1.76.0",
+    "ts-jest": "29.1.2",
+    "typescript": "4.9.5",
+    "vite": "3.2.10"
+  },
+  "volta": {
+    "node": "20.12.2"
+  }
+}
